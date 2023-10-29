@@ -15,71 +15,75 @@ race_aliases = {
 
 race_data = {
     'dragonborn': {
-        'title': 'Dragonborn',
-        'description': '',
+        'title': 'DRAGONBORN',
+        'description': '*Dragonborn resemble draconic humanoids. They are a proud race that values clan and skills above all else. Once enslaved by dragons, they strive to be self-sufficient, not wanting to be beholden to anyone, not even the gods. Dragonborn can have scales in a variety of colours, and may or may not have a tail.*',
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Dragonborn.png',
         'color': 0xF77709 #Placeholder     
         },
     'drow': {
-        'title': 'Drow',
-        'description': '',
+        'title': 'DROW',
+        'description': "*Drow are the dark elves of the Forgotten Realms. They dwell in the Underdark, large subterranean caverns beneath the surface.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Drow.png',
         'color': 0xF77709 #Placeholder     
         },
     'dwarf': {
-        'title': 'Dwarf',
-        'description': '',
+        'title': 'DWARF',
+        'description': "*As durable and unyielding as their homes of stone, dwarves are some of the finest warriors, miners, and smiths of Faerûn.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Dwarf.png',
         'color': 0xF77709 #Placeholder     
         },
     'elf': {
-        'title': 'Elf',
-        'description': '',
+        'title': 'ELF',
+        'description': "*With an ethereal countenance and long lifespans, elves are at home with nature's power, flourishing in light and dark alike.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Elf.png',
         'color': 0xF77709 #Placeholder     
         },
     'githyanki': {
-        'title': 'Githyanki',
-        'description': '',
+        'title': 'GITHYANKI',
+        'description': "*Githyanki are peerless warriors from the Astral Plane, known for their legendary silver blades and red dragon mounts. They seek the total destruction of Mind Flayers, whose ancient empire enslaved the Gith for millennia.\n\nAs time does not pass in their native Astral Plane, Githyanki are instead hatched from eggs all across realmspace in places called crèches. Crèches act as hatcheries, training grounds, and shelters outside of the Astral Plane.\n\nGithyanki are ruled by their lich queen Vlaakith and led in battle by her dragon-riding knights, the Kith'rak.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Githyanki.png',
         'color': 0xF77709 #Placeholder     
         },
     'gnome': {
-        'title': 'Gnome',
-        'description': '',
+        'title': 'GNOME',
+        'description': "*Small, clever, and energetic, gnomes use their long lives to explore Faerûn's brightest corners and darkest depths.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Gnome.png',
         'color': 0xF77709 #Placeholder     
         },
     'half-elf': {
-        'title': 'Half-Elf',
-        'description': '',
+        'title': 'HALF-ELF',
+        'description': "*Half-Elves inherit blessings from both their parents, but at the price of never quite fitting in. Curious, ambitious, and versatile, half-elves are welcome everywhere, but struggle without a community to call their own.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Half-Elf.png',
         'color': 0xF77709 #Placeholder     
         },
     'half-orc': {
-        'title': 'Half-Orc',
-        'description': '',
+        'title': 'HALF-ORC',
+        'description': "*Half-Orcs exhibit a blend of orcish and human characteristics, and their appearance varies widely. Creatures of intense emotion, Half-Orcs are more inclined to act than contemplate - whether the rage burning their bodies compels them to fight, or the love filling their hearts inspires acts of incredible kindness.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Half-Orc.png',
         'color': 0xF77709 #Placeholder     
         },
     'halfling': {
-        'title': 'Halfling',
-        'description': '',
+        'title': 'HALFLING',
+        'description': "*Small yet capable, halflings prefer the comforts of home and hearth - but their natural luck and dexterity makes them fine adventurers.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Halfling.png',
         'color': 0xF77709 #Placeholder     
         },
     'human': {
-        'title': 'Human',
-        'description': '',
+        'title': 'HUMAN',
+        'description': "*The most common face to see in Faerûn, humans are known for their tenacity, creativity, and endless capacity for growth.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Human.png',
         'color': 0xF77709 #Placeholder     
         },
     'tiefling': {
-        'title': 'Tiefling',
-        'description': '',
+        'title': 'TIEFLING',
+        'description': "*Touched by the Hells, Tieflings are resistant to fire and carry extraordinary Infernal powers.*",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Tiefling.png',
         'color': 0xF77709 #Placeholder     
         },
+}
+
+racial_trait = {
+    
 }
 
 def get_race_info(race_name):

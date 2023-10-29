@@ -24,7 +24,7 @@ bot.remove_command('help')
 
 @bot.hybrid_command(name='help')
 async def help_command(ctx):
-    await ctx.send("This is a test")
+    await ctx.send("")
     
 @bot.hybrid_command(name="info")
 async def buttonmenu(ctx, race_name: str):
@@ -32,12 +32,12 @@ async def buttonmenu(ctx, race_name: str):
         await ctx.send("Please provide a race. For example: `!info Human`")
         return
 
-    print(f"Received race_name: {race_name}")  # Add this line for debugging
+    print(f"Received race_name: {race_name}")  # debugging
 
     race_info = get_race_info(race_name)
 
     if race_info:
-        print(f"Found race_info for {race_name}: {race_info}")  # Add this line for debugging
+        print(f"Found race_info for {race_name}: {race_info}")  # debugging
 
         description = f"## **{race_info['title']}**\n\n"
         description += race_info['description']
@@ -55,7 +55,7 @@ async def buttonmenu(ctx, race_name: str):
 
         await ctx.send(embed=embed)
     else:
-        print(f"No race_info found for {race_name}")  # Add this line for debugging
+        print(f"No race_info found for {race_name}")  # debugging
 
     
 # ----- Write code between here -----
@@ -74,7 +74,7 @@ async def send_message(message, user_message, is_private):
 @bot.event
 async def on_ready():
     await bot.tree.sync()
-    await bot.change_presence(activity=discord.Streaming(name="Thou walkest alone? No companions???", url="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fwithers-is-savage-v0-zrmj8ccs13ib1.png%3Fauto%3Dwebp%26s%3Da380ea734ea78389a0b27afdf9a5c5585be0851b"))
+    await bot.change_presence(activity=discord.Game(name="Thou walkest alone? No companions???"))
     print(f'{bot.user} is now running!')
 
 @bot.event
