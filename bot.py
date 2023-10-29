@@ -3,6 +3,8 @@ import pytz
 import os
 import interactions
 import asyncio
+import dice
+import race
 from discord.ui import Button, View
 from dotenv import load_dotenv
 from discord.ext import commands
