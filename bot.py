@@ -5,9 +5,11 @@ import interactions
 import asyncio
 import dice
 import race
+import base64
 from discord.ui import Button, View
 from dotenv import load_dotenv
 from discord.ext import commands
+from race import get_race_info
 
 load_dotenv()  # Load environment variables from .env file
 TOKEN = os.getenv("DISCORD_TOKEN")  # Token grabber
@@ -23,6 +25,38 @@ bot.remove_command('help')
 @bot.hybrid_command(name='help')
 async def help_command(ctx):
     await ctx.send("This is a test")
+    
+@bot.hybrid_command(name="info")
+async def buttonmenu(ctx, race_name: str):
+    if race_name is None:
+        await ctx.send("Please provide a race. For example: `!info Human`")
+        return
+
+    print(f"Received race_name: {race_name}")  # Add this line for debugging
+
+    race_info = get_race_info(race_name)
+
+    if race_info:
+        print(f"Found race_info for {race_name}: {race_info}")  # Add this line for debugging
+
+        description = f"## **{race_info['title']}**\n\n"
+        description += race_info['description']
+
+        embed = discord.Embed(
+            title='',
+            description=description,
+            color=race_info['color']
+        )
+
+        image_url = race_info.get('image_url', '')
+
+        if image_url:
+            embed.set_thumbnail(url=image_url)
+
+        await ctx.send(embed=embed)
+    else:
+        print(f"No race_info found for {race_name}")  # Add this line for debugging
+
     
 # ----- Write code between here -----
 
@@ -40,6 +74,7 @@ async def send_message(message, user_message, is_private):
 @bot.event
 async def on_ready():
     await bot.tree.sync()
+    await bot.change_presence(activity=discord.Streaming(name="Thou walkest alone? No companions???", url="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fwithers-is-savage-v0-zrmj8ccs13ib1.png%3Fauto%3Dwebp%26s%3Da380ea734ea78389a0b27afdf9a5c5585be0851b"))
     print(f'{bot.user} is now running!')
 
 @bot.event
