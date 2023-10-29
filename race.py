@@ -1,4 +1,4 @@
-hero_aliases = {
+race_aliases = {
     'Dragonborn': ['DB', 'DragonB', 'DBorn', 'Dragon'],
     'Drow': ['Dr','Dro'],
     'Dwarf': ['Dw', 'Dwa', 'Dwar'],
