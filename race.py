@@ -82,6 +82,20 @@ race_data = {
         },
 }
 
+movement_speed = {
+    'dragonborn': '9m / 30ft',
+    'drow': '9m / 30ft',
+    'dwarf': '7.5m / 25ft',
+    'elf': '9m / 30ft',
+    'githyanki': '9m / 30ft',
+    'gnome': '7.5m / 25ft',
+    'half-elf': '9m / 30ft',
+    'half-orc': '9m / 30ft',
+    'halfling': '7.5m / 25ft',
+    'human': '9m / 30ft',
+    'tiefling': '9m / 30ft'   
+    }
+
 racial_trait = {
     
 }
@@ -98,5 +112,18 @@ def get_race_info(race_name):
             return race_data.get(race, None)
 
     print("No match found for race_name")  # Add this line for debugging
+    return None
 
+def get_movement_speed(race_name):
+    race_name = race_name.lower()
+    
+    print(f"Searching for race movement speed:{race_name}")
+    
+    for race, aliases in race_aliases.items():
+        if race_name == race:
+            return movement_speed.get(race, None)
+        elif race_name in aliases:
+            return movement_speed.get(race, None)
+    
+    print("No match found for movement speed")   
     return None
