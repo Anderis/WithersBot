@@ -53,7 +53,6 @@ async def buttonmenu(ctx, race_name: str):
                 color=race_info['color']
             )
         
-
         if image_url:
             embed.set_thumbnail(url=image_url)
 
