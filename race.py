@@ -89,7 +89,7 @@ movement_speed = {
     'elf': '**High Elf :** 9m / 30ft\n**Wood Elf :** 10.5m / 35ft',
     'githyanki': '9m / 30ft',
     'gnome': '7.5m / 25ft',
-    'half-elf': '9m / 30ft',
+    'half-elf': '**High Half-Elf:** 9m / 30ft\n**Wood Half-Elf:** 10.5m / 35ft\n**Drow Half-Elf:** 9m / 30ft',
     'half-orc': '9m / 30ft',
     'halfling': '7.5m / 25ft',
     'human': '9m / 30ft',
@@ -97,7 +97,7 @@ movement_speed = {
     }
 
 racial_trait = {
-    
+    #placeholder
 }
 
 def get_race_info(race_name):
