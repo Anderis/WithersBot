@@ -9,7 +9,7 @@ import base64
 from discord.ui import Button, View
 from dotenv import load_dotenv
 from discord.ext import commands
-from race import get_race_info, get_movement_speed
+from race import get_race_info, get_movement_speed, get_racial_trait
 
 load_dotenv()  # Load environment variables from .env file
 TOKEN = os.getenv("DISCORD_TOKEN")  # Token grabber
@@ -36,16 +36,20 @@ async def buttonmenu(ctx, race_name: str):
 
     race_info = get_race_info(race_name)
     movement_speed = get_movement_speed(race_name)
+    racial_trait = get_racial_trait(race_name)
     image_url = race_info.get('image_url', '')
 
     if race_info:
         print(f"Found race_info for {race_name}: {race_info}")  # debugging
 
         description = f"## **{race_info['title']}**\n\n"
-        description += f"{race_info['description']}\n\n"
+        description += f"{race_info['description']}\n"
         
         if movement_speed:
-            description += f"**__MOVEMENT SPEED__**\n{movement_speed}\n\n"
+            description += f"__**MOVEMENT SPEED**__\n{movement_speed}\n"
+        
+        if racial_trait:
+            description += f"### __RACIAL TRAIT__{racial_trait}\n"
 
             embed = discord.Embed(
                 title='',
