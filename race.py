@@ -64,7 +64,7 @@ race_data = {
         },
     'halfling': {
         'title': 'HALFLING',
-        'description': "Small yet capable, halflings prefer the comforts of home and hearth - but their natural luck and dexterity makes them fine adventurers.",
+        'description': "```ansi\n[2;31m[2;35m[2;34m[2;35m[0m[2;34m[0m[2;35m[0m[2;31m[0m[2;31mSmall yet capable, halflings prefer the comforts of home and hearth - but their natural luck and dexterity makes them fine adventurers.[0m[2;31m[0m\n```",
         'image_url': 'https://raw.githubusercontent.com/Anderis/WithersBot/main/images/races/Halfling.png',
         'color':  0xFF4040     
         },
