@@ -97,17 +97,17 @@ movement_speed = {
     }
 
 racial_trait = {
-    'dragonborn': '',
-    'drow': '',
-    'dwarf': '',
-    'elf': '',
-    'githyanki': '',
-    'gnome': '',
-    'half-elf': '',
-    'half-orc': '',
-    'halfling': '',
+    'dragonborn': 'Placeholder text for error disregard',
+    'drow': 'Placeholder text for error disregard',
+    'dwarf': 'Placeholder text for error disregard',
+    'elf': 'Placeholder text for error disregard',
+    'githyanki': 'Placeholder text for error disregard',
+    'gnome': 'Placeholder text for error disregard',
+    'half-elf': 'Placeholder text for error disregard',
+    'half-orc': 'Placeholder text for error disregard',
+    'halfling': 'Placeholder text for error disregard',
     'human': '\n### <:human_versatility:1168535401640775830> **Human Versatility** <:human_versatility:1168535401640775830>\n- *Gain  **Proficiency** in one additional **Skill***\n- *Increased **Carrying Capacity** by 25%*',
-    'tiefling': ''   
+    'tiefling': 'Placeholder text for error disregard'   
 }
 
 def get_race_info(race_name):
