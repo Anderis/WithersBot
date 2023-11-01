@@ -48,7 +48,7 @@ async def buttonmenu(ctx, race_name: str):
         if racial_trait:
             print(f"Found race movement: {movement_speed}")  # debugging
             print(f"Found racial trait: {racial_trait}")  # debugging
-            description += f"## __RACIAL TRAIT__\n- ***Movement Speed:** {movement_speed}*{racial_trait}\n"
+            description += f"## __RACIAL TRAIT__\n- Movement Speed: {movement_speed}{racial_trait}\n"
 
             embed = discord.Embed(
                 title='',

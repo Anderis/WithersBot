@@ -97,11 +97,11 @@ movement_speed = {
     }
 
 racial_trait = {
-    'dragonborn': '\nPlaceholder text for error disregard',
-    'drow': '\nPlaceholder text for error disregard',
-    'dwarf': '\nPlaceholder text for error disregard',
+    'dragonborn': '\n### <:Dragonborn:1168815084680773634> Breath Weapon <:Dragonborn:1168815084680773634>\n - `SUBRACE DEPENDENT`\n### <:Dragonborn:1168815084680773634> Draconic Ancestry <:Dragonborn:1168815084680773634>\n- `SUBRACE DEPENDENT`',
+    'drow': '\n### <:feyancestry:1168809746640420915> **Fey Ancestry** <:feyancestry:1168809746640420915>\n- Cannot be put to **sleep** by magic\n- Advantage on **saving throws** against **charmed**\n### <:superiordarkvision:1168815878553477170> Superior Darkvision <:superiordarkvision:1168815878553477170>\n- Can see in the dark up to 24m\n### <:Drow:1168815047133368350> Drow Magic <:Drow:1168815047133368350>\n- **Level 1:** <:dancinglights:1168816351368978452> Dancing Lights **cantrip**\n- **Level 3:** <:faeriefire:1168816324022120448> Faerie Fire **spell**\n- **Level 5:** <:darkness:1168816338404376606> Darkness **spell**',
+    'dwarf': '\n### <:dwarvenresilience:1169270630991007794> Dwarven Resilience <:dwarvenresilience:1169270630991007794>\n- Grants advantage on poison saving throws\n- Gain poison damage resistence\n### <:darkvision:1168809761857351701> Darkvision <:darkvision:1168809761857351701>\n- Can see in the dark up to 12m',
     'elf': '\n### <:feyancestry:1168809746640420915> **Fey Ancestry** <:feyancestry:1168809746640420915>\n- Cannot be put to **sleep** by magic\n- Advantage on **saving throws** against **charmed**\n### <:darkvision:1168809761857351701> Darkvision <:darkvision:1168809761857351701>\n- Can see in the dark up to 12m',
-    'githyanki': '\nPlaceholder text for error disregard',
+    'githyanki': '\n### <:astralknowledge:1169272239884083230> **Astral Knowledge** <:astralknowledge:1169272239884083230>\n- Gain **proficiency** in all Skills related to a chosen **Ability** until **Long Rest** `(Does not stack with current proficiencies)`\n### <:Githyanki:1168815041106157639> Githyanki Psionics <:Githyanki:1168815041106157639>\n- **Level 1:** <:magehand:1169272523410636850> Mage Hand **cantrip**\n- **Level 3:** <:enhancedleap:1169272546877771848> Enhanced Leap **spell**\n- **Level 5:** <:mistystep:1169272507849785387> Misty Step **spell**',
     'gnome': '\nPlaceholder text for error disregard',
     'half-elf': '\n### <:feyancestry:1168809746640420915> **Fey Ancestry** <:feyancestry:1168809746640420915>\n- Cannot be put to **sleep** by magic\n- Advantage on **saving throws** against **charmed**\n### <:darkvision:1168809761857351701> Darkvision <:darkvision:1168809761857351701>\n- Can see in the dark up to 12m',
     'half-orc': '\nPlaceholder text for error disregard',
