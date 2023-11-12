@@ -3,9 +3,11 @@ import pytz
 import os
 import interactions
 import asyncio
+import sqlite3
 import dice
 import race
 import base64
+import leveling
 from discord.ui import Button, View
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -24,7 +26,8 @@ bot.remove_command('help')
 
 @bot.hybrid_command(name='help')
 async def help_command(ctx):
-    await ctx.send("")
+    user_level = await get_user_level(ctx.author.id)
+    await ctx.send(f"You are level {user_level}. Use `!info` to learn more about races.")
     
 @bot.hybrid_command(name="info")
 async def buttonmenu(ctx, race_name: str):
@@ -78,12 +81,6 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 @bot.event
-async def on_ready():
-    await bot.tree.sync()
-    await bot.change_presence(activity=discord.Game(name="Thou walkest alone? No companions???"))
-    print(f'{bot.user} is now running!')
-
-@bot.event
 async def on_message(message):
     if message.author == bot.user:
         return
@@ -91,11 +88,15 @@ async def on_message(message):
     username = str(message.author)
     user_message = str(message.content)
 
-    if message.guild:  # Check if the message was sent in a server
+    if message.guild:
         channel = f"#{message.channel}"
         location = f"in {channel}"
     else:
         location = "in private DMs"
+
+    await bot.process_commands(message)  # Process bot commands first
+
+    await leveling.add_experience(message.author.id, 10)  # Adjust the amount as needed
 
     # Convert UTC time to EST timezone
     est_timezone = pytz.timezone('US/Eastern')
@@ -109,10 +110,5 @@ async def on_message(message):
     else:
         print(f'{username} said: "{user_message}" in DMs at {timestamp}')
 
-    if user_message.startswith('?'):
-        user_message = user_message[1:]
-        await send_message(message, user_message, is_private=True)
-    else:
-        await bot.process_commands(message)  # Handle bot commands
 
 bot.run(TOKEN)
